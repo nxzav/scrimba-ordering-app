@@ -1,0 +1,275 @@
+:root {
+    --pri-font: "Smythe", system-ui, serif;
+    --sec-font: "Reddit Sans Condensed", sans-serif;
+    --text-md: 22px;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #fff;
+  background: #774936;
+}
+
+::selection {
+  color: #fff;
+  background: #774936;
+}
+
+/* Normalize */
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--pri-font);
+    background: #dddddd;
+    font-size: var(--text-md);
+}
+
+/* Typography */
+
+h1, h2 {
+    margin: 0;
+    font-weight: 400;
+}
+
+h1 {
+    margin: 0;
+    font-size: 39px;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 30px
+}
+
+p {
+    margin: 0;
+}
+
+/* Layout */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.header-bg {
+    background-color: #2f0e07;
+}
+
+.header {
+    padding: 40px;
+    color: #fff;
+    text-shadow: 0 0 4px #000;
+    background: url('images/pizza.svg');
+    background-position: center;
+    background-size: 50px;
+    text-align: center;
+}
+
+.header > p {
+    margin: 0;
+    font-size: var(--text-md);
+}
+
+.product {
+    position: relative;
+    display: flex;
+    padding: 0 46px;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+    min-height: 160px;
+    align-items: center;
+    background: #fff;
+    transition: all 0.2s;
+}
+
+.product:hover {
+    z-index: 1;
+    box-shadow: inset 4px 4px #16DB99, inset -4px -4px #16DB99;
+}
+
+.icon {
+    width: 100px;
+    font-size: 80px;
+}
+
+.prod-desc {
+    flex-grow: 1;
+    padding: 10px 20px;
+}
+
+.prod-ingre {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #888;
+}
+
+.product-add-rem {
+    display: flex;
+    align-items: center;
+}
+
+#prod-qty {
+    font-family: var(--sec-font);
+    margin: 0 6px;
+}
+
+.add-btn {
+    user-select: none;
+    width: 42px;
+    transition: all 0.1s ease-out;
+}
+
+.add-btn:hover {
+    cursor: pointer;
+    transform: scale(110%);
+}
+
+.order-resume {
+    margin-bottom: 30px;
+    padding: 40px 46px;
+    background-color: #fff;
+}
+
+.order-resume__title {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+#order-products {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #333;
+}
+
+.remove-btn {
+    color: #e68888;
+    font-family: var(--sec-font);
+    font-size: 12px
+}
+
+.remove-btn:hover {
+    cursor: pointer;
+    color: #f00;
+}
+
+.order-element {
+    display: flex;
+    align-items: baseline;
+}
+
+.order-element > * {
+    margin-right: 10px;
+}
+
+.order-element > p {
+    margin-left: auto;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+}
+
+.total > h2{
+    display: inline-block;
+}
+
+.purchase-btn {
+    width: 100%;
+    display: block;
+    padding: 16px 0;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    background: #16DB99;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: var(--sec-font);
+    color: #fff;
+    transition: all 0.2s;
+}
+
+.purchase-btn:hover {
+    cursor: pointer;
+    background: #1bb581;
+}
+
+#modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+}
+
+#payment-gateway {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 92%;
+    padding: 26px;
+    max-width: 520px;
+    background-color: #fff;
+    text-align: center;
+    font-family: var(--sec-font);
+    box-shadow: 0 0 300px #000a;
+}
+
+#payment-gateway > input, #payment-gateway > button {
+    font-family: var(--sec-font);
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#final-message {
+    padding: 30px 0;
+    background: #ECFDF5;
+    color: #065F46;
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        padding: 32px;
+        margin: 0;
+    }
+
+    .icon {
+        width: 70px;
+        font-size: 50px;
+    }
+
+    .product {
+        padding: 0 10px;
+        min-height: 120px;
+    }
+
+    .prod-desc {
+        padding: 10px;
+    }
+
+    .add-btn {
+        margin-right: 10px;
+    }
+}

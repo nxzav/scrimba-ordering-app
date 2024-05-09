@@ -1,0 +1,43 @@
+<html>
+
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Reddit+Sans+Condensed:wght@200..900&family=Smythe&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<header>
+		<div class="container header-bg">
+			<div class="container header">
+				<h1>Jimmy's Diner</h1>
+				<p>The best burguers and pizzas in town.</p>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="container products" id="product-list"></div>
+	</section>
+	<section id="order-resume" class="container order-resume">
+		<h2 class="order-resume__title">Your order</h2>
+		<div id="order-products"></div>
+		<div class="total">
+			<h2>Total price: </h2>
+			<h2 id="total-amount">$0</h2>
+		</div>
+		<button id="purchase-btn" class="purchase-btn">Complete order</button>
+	</section>
+	<div id="modal-overlay">
+		<div id="payment-gateway">
+			<h3>Enter card details</h3>
+			<input id="user" name="user" placeholder="Name" required/>
+			<input id="card" name="card" placeholder="Card number" type="text" maxlength="16" required/>
+			<input id="cvv" name="cvv" placeholder="CVV" type="text" maxlength="3" required/>
+			<button id="pay-btn" class="purchase-btn">Pay</button>
+		</div>
+	</div>
+	<script src="index.js" type="module"></script>
+</body>
+
+</html>
