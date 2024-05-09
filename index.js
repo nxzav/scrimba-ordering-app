@@ -76,7 +76,6 @@ const completePurchase = () => {
         const cvv = cvvIn.value;
         const total = cartObj.total;
         if (cardnum.length === 16 && cvv.length === 3) {
-            console.log({ username, cardnum, cvv, total });
             document.getElementById('payment-gateway').innerHTML = `
             <div style="background: #16DB99; width: 100%; heigth: 100%;">
                 <h3 style="color: #ffffff">Procesing purchase...</h3>
